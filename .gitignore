@@ -38,3 +38,7 @@ target/
 /gradlew.bat
 .todo
 *.properties
+
+# Resourses
+src/test/resources/config/local.properties
+src/test/resources/config/remote.properties
