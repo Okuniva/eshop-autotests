@@ -1,6 +1,6 @@
 package alexheal.eshop.helpers;
 
-import alexheal.wisebits.config.Project;
+import alexheal.eshop.config.Project;
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
