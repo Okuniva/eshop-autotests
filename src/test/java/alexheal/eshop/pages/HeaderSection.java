@@ -1,4 +1,4 @@
-package alexheal.eshop.ui;
+package alexheal.eshop.pages;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;

@@ -1,9 +1,9 @@
 package alexheal.eshop.tests;
 
 import alexheal.eshop.config.App;
-import alexheal.eshop.ui.HeaderSection;
-import alexheal.eshop.ui.HomePage;
-import alexheal.eshop.ui.LoginPage;
+import alexheal.eshop.pages.HeaderSection;
+import alexheal.eshop.pages.HomePage;
+import alexheal.eshop.pages.LoginPage;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
