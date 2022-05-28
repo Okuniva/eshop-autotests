@@ -1,4 +1,4 @@
-package alexheal.eshop.tests;
+package alexheal.eshop.tests.ui;
 
 import alexheal.eshop.config.Project;
 import alexheal.eshop.helpers.AllureAttachments;

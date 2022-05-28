@@ -1,4 +1,4 @@
-package alexheal.eshop.tests;
+package alexheal.eshop.tests.ui;
 
 import alexheal.eshop.pages.HomePage;
 import org.junit.jupiter.api.DisplayName;
