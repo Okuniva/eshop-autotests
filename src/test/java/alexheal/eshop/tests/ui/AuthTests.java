@@ -14,6 +14,9 @@ public class AuthTests extends TestBase {
     @DisplayName("success authorization demo user test")
     void successAuthorizationDemoUserTest() {
         new HomePage().openHomePage();
+
+        new HeaderSection().verifyUsername("LOGIN");
+
         new HeaderSection().clickLogin();
         new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());
 
