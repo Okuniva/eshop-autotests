@@ -4,8 +4,7 @@ import alexheal.eshop.config.App;
 import alexheal.eshop.helpers.DriverUtils;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
+import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class HomePage {
@@ -16,7 +15,7 @@ public class HomePage {
         return this;
     }
 
-    @Step("Page title should have text 'eShopOnContainers - SPA'")
+    @Step("page title should have text 'eShopOnContainers - SPA'")
     public HomePage verifyTitle() {
         String expectedTitle = "eShopOnContainers - SPA";
         String actualTitle = title();
@@ -26,12 +25,19 @@ public class HomePage {
         return this;
     }
 
-    @Step("Console logs should not contain text 'SEVERE'")
+    @Step("console logs should not contain text 'SEVERE'")
     public HomePage verifyConsoleLog() {
         String consoleLogs = DriverUtils.getConsoleLogs();
         String errorText = "SEVERE";
 
         assertThat(consoleLogs).doesNotContain(errorText);
+
+        return this;
+    }
+
+    @Step("add item {index} to basket")
+    public HomePage addItemToBasket(int index) {
+        $$(".esh-catalog-item").get(index).hover().click();
 
         return this;
     }

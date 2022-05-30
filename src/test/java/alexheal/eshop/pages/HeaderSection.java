@@ -18,4 +18,11 @@ public class HeaderSection {
 
         return this;
     }
+
+    @Step("click 'Basket'")
+    public HeaderSection clickBasket() {
+        $(".esh-basketstatus-image").click();
+
+        return this;
+    }
 }
