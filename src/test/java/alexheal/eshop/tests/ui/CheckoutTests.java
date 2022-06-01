@@ -19,5 +19,12 @@ public class CheckoutTests extends TestBase {
                 .verifyItems(1, "$8.50")
                 .clickCheckout();
         // ToDo add verify shadow CSS
+        new CheckoutPage()
+                .clickPlaceOrder();
+        new OrdersPage()
+                .verifyToastText("Updated to status: Submitted")
+                .verifyToastText("Updated to status: AwaitingStockValidation")
+                .verifyToastText("Updated to status: Validated")
+                .verifyToastText("Updated to status: Paid");
     }
 }

@@ -6,6 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.cssValue;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -13,6 +14,8 @@ public class BasketPage {
     public BasketPage() {
         $(".esh-app-header")
                 .shouldHave(cssValue("height", "208px"));
+        $(byTagAndText("h1", "[ Shopping Bag ]"))
+                .shouldBe(visible);
     }
 
     @Step("click 'Checkout'")
