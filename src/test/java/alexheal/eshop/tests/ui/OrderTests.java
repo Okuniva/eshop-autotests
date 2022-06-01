@@ -2,11 +2,13 @@ package alexheal.eshop.tests.ui;
 
 import alexheal.eshop.config.App;
 import alexheal.eshop.pages.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class CheckoutTests extends TestBase {
+public class OrderTests extends TestBase {
     @Test
-    void checkoutTest() {
+    @DisplayName("verify text in order toasts")
+    void orderTest() {
         // ToDo add api request to blear basket
         new HomePage().openHomePage();
         new HeaderSection().clickLogin();

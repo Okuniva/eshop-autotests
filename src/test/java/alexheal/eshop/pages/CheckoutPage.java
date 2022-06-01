@@ -1,14 +1,10 @@
 package alexheal.eshop.pages;
 
-import com.codeborne.selenide.ClickOptions;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.source;
+import static com.codeborne.selenide.Condition.cssValue;
+import static com.codeborne.selenide.Selectors.byTagAndText;
+import static com.codeborne.selenide.Selenide.$;
 
 public class CheckoutPage {
     public CheckoutPage() {
