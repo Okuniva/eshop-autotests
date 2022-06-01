@@ -2,8 +2,13 @@ package alexheal.eshop.pages;
 
 import alexheal.eshop.config.App;
 import alexheal.eshop.helpers.DriverUtils;
+import alexheal.eshop.models.Brand;
+import com.codeborne.selenide.ClickOptions;
 import io.qameta.allure.Step;
 
+import static com.codeborne.selenide.Condition.cssValue;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -11,6 +16,8 @@ public class HomePage {
     @Step("open HomePage")
     public HomePage openHomePage() {
         open(App.config.webUrl());
+        $(".esh-app-header")
+                .shouldHave(cssValue("height", "464px"));
 
         return this;
     }
@@ -41,4 +48,28 @@ public class HomePage {
 
         return this;
     }
+
+    @Step("set {brand} filter")
+    public HomePage setBrand(Brand brand) {
+        $("#brand").selectOptionByValue(brand.value);
+
+        return this;
+    }
+
+    @Step("apply filter")
+    public HomePage applyFilter() {
+        $(byTagAndText("button", "Apply"))
+                .hover().click(ClickOptions.usingDefaultMethod());
+
+        return this;
+    }
+
+    public HomePage verifyNoResultsFindMessage() {
+        $(byTagAndText("span", "THERE ARE NO RESULTS THAT MATCH YOUR SEARCH"))
+                .shouldBe(visible);
+
+        return this;
+    }
+
+
 }

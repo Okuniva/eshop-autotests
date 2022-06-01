@@ -23,6 +23,7 @@ public class OrderTests extends TestBase {
         // ToDo add verify shadow CSS
         new CheckoutPage()
                 .clickPlaceOrder();
+        // ToDo add verify order table
         new OrdersPage()
                 .verifyToastText("Updated to status: Submitted")
                 .verifyToastText("Updated to status: AwaitingStockValidation")
