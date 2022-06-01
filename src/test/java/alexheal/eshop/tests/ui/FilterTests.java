@@ -17,6 +17,15 @@ public class FilterTests extends TestBase {
     }
 
     @Test
+    @DisplayName("verify filter by brand")
+    void filterByBrandTest() {
+        new HomePage().openHomePage()
+                .setBrand(FilterBrand.Other)
+                .applyFilter()
+                .verifyShowingMessage(8, 8, 1, 1);
+    }
+
+    @Test
     @DisplayName("verify filter by type")
     void filterByTypeTest() {
         new HomePage().openHomePage()
