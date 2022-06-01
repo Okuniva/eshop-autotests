@@ -1,6 +1,7 @@
 package alexheal.eshop.helpers;
 
 import io.qameta.allure.Allure;
+import io.qameta.allure.AllureLifecycle;
 import io.qameta.allure.Attachment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,8 +10,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 import static com.codeborne.selenide.Selenide.sleep;
+import static io.qameta.allure.Allure.getLifecycle;
 
 public class AllureAttachments {
     public static final Logger LOGGER = LoggerFactory.getLogger(AllureAttachments.class);
@@ -32,6 +36,10 @@ public class AllureAttachments {
     @Attachment(value = "Page source", type = "text/html")
     public static byte[] addPageSource() {
         return DriverUtils.getPageSourceAsBytes();
+    }
+
+    public static void removeParameters() {
+        Allure.getLifecycle().updateStep(step -> step.setParameters(new LinkedList<>()));
     }
 
     public static void addVideo(String sessionId) {
@@ -56,6 +64,4 @@ public class AllureAttachments {
             }
         }
     }
-
-
 }

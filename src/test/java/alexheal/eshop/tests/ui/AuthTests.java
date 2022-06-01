@@ -18,6 +18,7 @@ public class AuthTests extends TestBase {
         new HeaderSection().verifyUsername("LOGIN");
 
         new HeaderSection().clickLogin();
+
         new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());
 
         new HeaderSection().verifyUsername(App.config.userLogin());

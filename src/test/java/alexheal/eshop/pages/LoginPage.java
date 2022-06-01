@@ -1,14 +1,22 @@
 package alexheal.eshop.pages;
 
+import alexheal.eshop.helpers.AllureAttachments;
+import com.codeborne.selenide.SetValueOptions;
+import io.qameta.allure.Allure;
+import io.qameta.allure.AllureLifecycle;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
-    @Step("authorization by {email} and {password}")
+    @Step("authorization")
     public LoginPage authorization(String email, String password) {
-        $("#Email").val(email);
-        $("#Password").val(password).pressEnter();
+        AllureAttachments.removeParameters();
+
+        $("#Email").setValue(SetValueOptions.withText(email)
+                .withDisplayedText(email.substring(0, 2) + "* - email"));
+        $("#Password").setValue(SetValueOptions.withText(password).sensitive())
+                .pressEnter();
 
         return this;
     }
