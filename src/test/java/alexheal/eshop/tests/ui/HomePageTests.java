@@ -8,16 +8,14 @@ public class HomePageTests extends TestBase {
     @Test
     @DisplayName("Page title should have header text")
     void titleTest() {
-        new HomePage()
-                .openHomePage()
+        new HomePage().openHomePage()
                 .verifyTitle();
     }
 
     @Test
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
-        new HomePage()
-                .openHomePage()
+        new HomePage().openHomePage()
                 .verifyConsoleLog();
     }
 }

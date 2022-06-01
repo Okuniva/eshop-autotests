@@ -2,8 +2,6 @@ package alexheal.eshop.pages;
 
 import alexheal.eshop.helpers.AllureAttachments;
 import com.codeborne.selenide.SetValueOptions;
-import io.qameta.allure.Allure;
-import io.qameta.allure.AllureLifecycle;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
