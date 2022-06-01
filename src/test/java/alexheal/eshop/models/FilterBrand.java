@@ -1,6 +1,6 @@
 package alexheal.eshop.models;
 
-public enum Brand {
+public enum FilterBrand {
     All("null"),
     Azure("1"),
     NET("2"),
@@ -10,7 +10,7 @@ public enum Brand {
 
     public final String value;
 
-    Brand(String value) {
+    FilterBrand(String value) {
         this.value = value;
     }
 }

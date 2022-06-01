@@ -2,7 +2,8 @@ package alexheal.eshop.pages;
 
 import alexheal.eshop.config.App;
 import alexheal.eshop.helpers.DriverUtils;
-import alexheal.eshop.models.Brand;
+import alexheal.eshop.models.FilterBrand;
+import alexheal.eshop.models.FilterType;
 import com.codeborne.selenide.ClickOptions;
 import io.qameta.allure.Step;
 
@@ -49,9 +50,16 @@ public class HomePage {
         return this;
     }
 
-    @Step("set {brand} filter")
-    public HomePage setBrand(Brand brand) {
+    @Step("set filter brand - {brand}")
+    public HomePage setBrand(FilterBrand brand) {
         $("#brand").selectOptionByValue(brand.value);
+
+        return this;
+    }
+
+    @Step("set filter type - {type}")
+    public HomePage setType(FilterType type) {
+        $("#type").selectOptionByValue(type.value);
 
         return this;
     }
@@ -60,6 +68,14 @@ public class HomePage {
     public HomePage applyFilter() {
         $(byTagAndText("button", "Apply"))
                 .hover().click(ClickOptions.usingDefaultMethod());
+
+        return this;
+    }
+
+    public HomePage verifyShowingMessage(int showingProducts, int allProducts, int currentPage, int allPages) {
+        $(byTagAndText("span", String.format("Showing %d of %d products - Page %d - %d",
+                showingProducts, allProducts, currentPage, allPages)))
+                .shouldBe(visible);
 
         return this;
     }
