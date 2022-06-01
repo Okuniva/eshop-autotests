@@ -27,7 +27,7 @@ public class BasketPage {
     }
 
     public BasketPage verifyItems(int count, String price) {
-        SelenideElement checkoutInfo = $(".esh-basket-checkout");
+        SelenideElement checkoutInfo = $(".esh-basket-checkout").as("checkoutInfo");
         checkoutInfo.shouldHave(Condition.text("(" + count + " items)"));
         checkoutInfo.shouldHave(Condition.text(price));
 

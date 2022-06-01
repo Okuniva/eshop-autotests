@@ -6,7 +6,7 @@ import static java.time.Duration.ofSeconds;
 
 public class OrdersPage {
     public OrdersPage verifyToastText(String expectedToast) {
-        $("#toast-container")
+        $("#toast-container").as("toast")
                 .shouldHave(text(expectedToast), ofSeconds(60));
         return this;
     }

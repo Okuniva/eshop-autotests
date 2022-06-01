@@ -14,7 +14,8 @@ public class HeaderSection {
     }
 
     public HeaderSection verifyUsername(String username) {
-        $(".esh-identity-name").shouldHave(Condition.exactTextCaseSensitive(username));
+        $(".esh-identity-name").as("username")
+                .shouldHave(Condition.exactTextCaseSensitive(username));
 
         return this;
     }
