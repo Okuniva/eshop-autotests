@@ -9,9 +9,9 @@ public class Data {
     public String pictureFileName;
     public String pictureUri;
     public Integer catalogTypeId;
-    public String catalogType;
+    public CatalogType catalogType;
     public Integer catalogBrandId;
-    public String catalogBrand;
+    public CatalogBrand catalogBrand;
     public Integer availableStock;
     public Integer restockThreshold;
     public Integer maxStockThreshold;
