@@ -14,6 +14,7 @@ repositories {
 def allureVersion = "2.17.3",
     junitVersion = "5.8.2",
     selenideVersion = "6.5.1",
+    selenideAppiumVersion = "2.0.3",
     restAssured = "5.0.1",
     slf4jVersion = "1.7.32"
 
@@ -52,6 +53,9 @@ dependencies {
 
     // Asserts
     testImplementation('org.assertj:assertj-core:3.22.0')
+
+    // Appium
+    testImplementation("com.codeborne:selenide-appium:$selenideAppiumVersion")
 }
 
 java {

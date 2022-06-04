@@ -2,6 +2,9 @@ package alexheal.eshop.helpers;
 
 import alexheal.eshop.config.Project;
 import com.codeborne.selenide.Selenide;
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.MobileBy;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -18,6 +21,9 @@ import static org.openqa.selenium.logging.LogType.BROWSER;
 public class DriverUtils {
     public static final Logger LOGGER = LoggerFactory.getLogger(DriverUtils.class);
 
+    public static By byTestId(String testId) {
+        return AppiumBy.accessibilityId(testId);
+    }
 
     public static String getSessionId() {
         return ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
