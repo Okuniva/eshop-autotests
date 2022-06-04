@@ -1,6 +1,7 @@
 package alexheal.eshop.pages.mobile;
 
 import alexheal.eshop.helpers.AllureAttachments;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SetValueOptions;
 import io.qameta.allure.Step;
 
@@ -10,12 +11,16 @@ import static com.codeborne.selenide.Selenide.$;
 public class LoginPage {
     @Step("authorization")
     public LoginPage authorization(String email, String password) {
-        AllureAttachments.removeParameters();
-
-        $(byTestId("UserNameEntry")).setValue(SetValueOptions.withText(email)
-                .withDisplayedText(email.substring(0, 2) + "* - email"));
-        $(byTestId("PasswordEntry")).setValue(SetValueOptions.withText(password).sensitive());
+        $(byTestId("UserNameEntry")).setValue(email);
+        $(byTestId("PasswordEntry")).setValue(password);
         $(byTestId("LoginBtn")).click();
+
+        return this;
+    }
+
+    public LoginPage verifyInfoLabel() {
+        $(byTestId("InfoLabel")).as("Info label")
+                .shouldHave(Condition.text("ARE YOU REGISTERED?"));
 
         return this;
     }

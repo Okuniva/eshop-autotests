@@ -8,7 +8,7 @@ import static alexheal.eshop.helpers.DriverUtils.byTestId;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CatalogPage {
-    @Step("tap 'Profile'")
+    @Step("click 'Profile'")
     public CatalogPage tapProfile() {
         $(byTestId("PROFILE")).click();
 
