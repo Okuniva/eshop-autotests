@@ -1,4 +1,4 @@
-package alexheal.eshop.pages;
+package alexheal.eshop.pages.web;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;

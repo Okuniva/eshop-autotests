@@ -17,13 +17,13 @@ import org.junit.jupiter.api.extension.ExtendWith;
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
     @BeforeAll
-    static void setUp() {
+    static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
     }
 
     @AfterEach
-    public void addAttachments() {
+    public void afterEach() {
         String sessionId = DriverUtils.getSessionId();
 
         AllureAttachments.addScreenshotAs("Last screenshot");

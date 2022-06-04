@@ -1,9 +1,9 @@
 package alexheal.eshop.tests.ui;
 
 import alexheal.eshop.config.App;
-import alexheal.eshop.pages.HeaderSection;
-import alexheal.eshop.pages.HomePage;
-import alexheal.eshop.pages.LoginPage;
+import alexheal.eshop.pages.web.HeaderSection;
+import alexheal.eshop.pages.web.HomePage;
+import alexheal.eshop.pages.web.LoginPage;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,11 +16,9 @@ public class AuthTests extends TestBase {
     @DisplayName("success authorization demo user test")
     void successAuthorizationDemoUserTest() {
         new HomePage().openHomePage();
-        assertThat(true).isFalse();
 
-        new HeaderSection().verifyUsername("LOGIN");
-
-        new HeaderSection().clickLogin();
+        new HeaderSection().verifyUsername("LOGIN")
+                .clickLogin();
 
         new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());
 

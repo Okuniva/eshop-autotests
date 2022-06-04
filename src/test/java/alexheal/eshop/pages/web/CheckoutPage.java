@@ -1,4 +1,4 @@
-package alexheal.eshop.pages;
+package alexheal.eshop.pages.web;
 
 import io.qameta.allure.Step;
 

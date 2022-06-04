@@ -16,8 +16,7 @@ import static io.qameta.allure.Allure.step;
 
 public class TestBase {
     @BeforeAll
-    public static void setup() {
-        closeWebDriver();
+    public static void beforeAll() {
         addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.browserSize = null;
@@ -25,7 +24,7 @@ public class TestBase {
     }
 
     @BeforeEach
-    public void startDriver() {
+    public void beforeEach() {
         open();
     }
 
@@ -34,6 +33,6 @@ public class TestBase {
         AllureAttachments.addScreenshotAs("Last screenshot");
         AllureAttachments.addPageSource();
 
-        step("Close driver", Selenide::closeWebDriver);
+        closeWebDriver();
     }
 }

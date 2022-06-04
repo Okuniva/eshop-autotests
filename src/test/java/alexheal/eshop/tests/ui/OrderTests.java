@@ -1,7 +1,7 @@
 package alexheal.eshop.tests.ui;
 
 import alexheal.eshop.config.App;
-import alexheal.eshop.pages.*;
+import alexheal.eshop.pages.web.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +9,7 @@ public class OrderTests extends TestBase {
     @Test
     @DisplayName("verify text in order toasts")
     void orderTest() {
-        // ToDo add api request to blear basket
+        // ToDo add api request to clear basket
         new HomePage().openHomePage();
         new HeaderSection().clickLogin();
         new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());

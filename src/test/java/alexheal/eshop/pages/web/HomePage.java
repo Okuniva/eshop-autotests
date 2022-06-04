@@ -1,4 +1,4 @@
-package alexheal.eshop.pages;
+package alexheal.eshop.pages.web;
 
 import alexheal.eshop.config.App;
 import alexheal.eshop.helpers.DriverUtils;

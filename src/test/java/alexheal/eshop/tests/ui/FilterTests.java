@@ -2,7 +2,7 @@ package alexheal.eshop.tests.ui;
 
 import alexheal.eshop.models.FilterBrand;
 import alexheal.eshop.models.FilterType;
-import alexheal.eshop.pages.HomePage;
+import alexheal.eshop.pages.web.HomePage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
