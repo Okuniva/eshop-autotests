@@ -42,3 +42,4 @@ target/
 # Resourses
 src/test/resources/config/local.properties
 src/test/resources/config/remote.properties
+/src/test/resources/apk/
