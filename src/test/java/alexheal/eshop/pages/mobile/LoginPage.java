@@ -11,9 +11,9 @@ import static com.codeborne.selenide.Selenide.$;
 public class LoginPage {
     @Step("authorization")
     public LoginPage authorization(String email, String password) {
-        $(byTestId("UserNameEntry")).setValue(email);
-        $(byTestId("PasswordEntry")).setValue(password);
-        $(byTestId("LoginBtn")).click();
+//        $(byTestId("UserNameEntry")).setValue(email);
+//        $(byTestId("PasswordEntry")).setValue(password);
+        $(byTestId("LoginButton")).click();
 
         return this;
     }

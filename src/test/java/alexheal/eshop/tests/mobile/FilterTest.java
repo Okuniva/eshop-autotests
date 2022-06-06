@@ -18,6 +18,5 @@ public class FilterTest extends TestBase {
                 .applyFilter();
 
         new CatalogPage().verifyItem("AZURE BLACK SWEATSHIRT (M)", "$19.50");
-
     }
 }
