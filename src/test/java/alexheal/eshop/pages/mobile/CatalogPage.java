@@ -21,6 +21,13 @@ public class CatalogPage {
         return this;
     }
 
+    @Step("click 'ShoppingCart'")
+    public CatalogPage tapCart() {
+        $(byTestId("ShoppingCart")).click();
+
+        return this;
+    }
+
     public CatalogPage verifyItem(String name, String price) {
         $(byTestId("ProductName")).shouldHave(text(name));
         $(byTestId("ProductPrice")).shouldHave(text(price));
