@@ -19,4 +19,15 @@ public class FilterTest extends TestBase {
 
         new CatalogPage().verifyItem("AZURE BLACK SWEATSHIRT (M)", "$19.50");
     }
+
+    @Test
+    void emptyResultTest() {
+        new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());
+        new CatalogPage().tapFilter();
+        new FilterPage().setBrand(FilterBrand.NET)
+                .setType(FilterType.Pin)
+                .applyFilter();
+
+        new CatalogPage().verifyNoProductsFound();
+    }
 }

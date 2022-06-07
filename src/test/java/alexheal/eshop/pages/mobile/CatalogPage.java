@@ -1,11 +1,9 @@
 package alexheal.eshop.pages.mobile;
 
-import alexheal.eshop.helpers.AllureAttachments;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SetValueOptions;
 import io.qameta.allure.Step;
 
 import static alexheal.eshop.helpers.DriverUtils.byTestId;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CatalogPage {
@@ -24,8 +22,15 @@ public class CatalogPage {
     }
 
     public CatalogPage verifyItem(String name, String price) {
-        $(byTestId("ProductName")).shouldHave(Condition.text(name));
-        $(byTestId("ProductPrice")).shouldHave(Condition.text(price));
+        $(byTestId("ProductName")).shouldHave(text(name));
+        $(byTestId("ProductPrice")).shouldHave(text(price));
+
+        return this;
+    }
+
+    public CatalogPage verifyNoProductsFound() {
+        $(byTestId("NoProductsFoundLabel")).shouldHave(
+                text("NO PRODUCTS FOUND"));
 
         return this;
     }

@@ -31,7 +31,6 @@ public class TestBase {
     @AfterEach
     public void afterEach() {
         AllureAttachments.addScreenshotAs("Last screenshot");
-        AllureAttachments.addPageSource();
 
         closeWebDriver();
     }
