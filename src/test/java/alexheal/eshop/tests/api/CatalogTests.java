@@ -1,6 +1,7 @@
 package alexheal.eshop.tests.api;
 
 import alexheal.eshop.models.catalog.Items;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -63,6 +64,21 @@ public class CatalogTests {
     void negativePageSizeTest(String pageSize) {
         String instance = format("/Catalog/items?pageSize=%s", pageSize);
         String errorText = format("The value '%s' is not valid.", pageSize);
+
+        given()
+                .spec(request)
+                .when()
+                .get(instance)
+                .then()
+                .statusCode(400)
+                .body("errors.pageSize", hasItem(errorText),
+                        "title", is("One or more validation errors occurred."));
+    }
+
+    @Test
+    void negativeEmptyPageSizeTest() {
+        String instance = format("/Catalog/items?pageSize=%s", "");
+        String errorText = format("The value '%s' is invalid.", "");
 
         given()
                 .spec(request)
