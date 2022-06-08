@@ -1,6 +1,8 @@
 package alexheal.eshop.tests.api;
 
 import alexheal.eshop.models.catalog.Items;
+import io.qameta.allure.Param;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -16,7 +18,8 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 
 public class CatalogTests {
-    @ParameterizedTest
+    @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
+    @DisplayName("success get items")
     @CsvSource(value = {
             "10, 0, 14",
             "2147483647, 0, 14",
@@ -25,7 +28,9 @@ public class CatalogTests {
             "1, 1, 14",
             "2147483647, 2147483647, 14"
     })
-    void successGetItemsTest(int pageSize, int pageIndex, int countResult) {
+    void successGetItemsTest(@Param("pageSize") int pageSize,
+                             @Param("pageIndex") int pageIndex,
+                             @Param("countResult") int countResult) {
         String instance = format("/Catalog/items?pageSize=%d&pageIndex=%d", pageSize, pageIndex);
 
         Items items = given()
@@ -44,9 +49,10 @@ public class CatalogTests {
         assertThat(items.data.size()).isLessThanOrEqualTo(pageSize);
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
+    @DisplayName("negative 500 server error")
     @ValueSource(ints = {-Integer.MAX_VALUE, -100, -10, -1, 0})
-    void negativeServerError(int pageSize) {
+    void negativeServerErrorTest(@Param("pageSize") int pageSize) {
         String instance = format("/Catalog/items?pageSize=%d", pageSize);
 
         given()
@@ -59,9 +65,10 @@ public class CatalogTests {
                         is("The number of rows provided for a FETCH clause must be greater then zero."));
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
+    @DisplayName("negative page size param 400 error")
     @ValueSource(strings = {"null", "'", "й"})
-    void negativePageSizeTest(String pageSize) {
+    void negativePageSizeTest(@Param("pageSize") String pageSize) {
         String instance = format("/Catalog/items?pageSize=%s", pageSize);
         String errorText = format("The value '%s' is not valid.", pageSize);
 
@@ -76,6 +83,7 @@ public class CatalogTests {
     }
 
     @Test
+    @DisplayName("negative empty page size param 400 error")
     void negativeEmptyPageSizeTest() {
         String instance = format("/Catalog/items?pageSize=%s", "");
         String errorText = format("The value '%s' is invalid.", "");
