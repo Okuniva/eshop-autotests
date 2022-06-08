@@ -4,6 +4,8 @@ import alexheal.eshop.models.FilterBrand;
 import alexheal.eshop.models.FilterType;
 import alexheal.eshop.pages.web.HomePage;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -13,6 +15,7 @@ public class FilterTests extends TestBase {
     @Test
     @Owner("ValeevAA")
     @DisplayName("verify filter no results find message")
+    @Severity(SeverityLevel.NORMAL)
     void emptyResultTest() {
         new HomePage().openHomePage()
                 .setBrand(FilterBrand.Azure)
@@ -23,6 +26,7 @@ public class FilterTests extends TestBase {
     @Test
     @Owner("ValeevAA")
     @DisplayName("verify filter by brand")
+    @Severity(SeverityLevel.NORMAL)
     void filterByBrandTest() {
         new HomePage().openHomePage()
                 .setBrand(FilterBrand.Other)
@@ -33,6 +37,7 @@ public class FilterTests extends TestBase {
     @Test
     @Owner("ValeevAA")
     @DisplayName("verify filter by type")
+    @Severity(SeverityLevel.NORMAL)
     void filterByTypeTest() {
         new HomePage().openHomePage()
                 .setType(FilterType.Pin)

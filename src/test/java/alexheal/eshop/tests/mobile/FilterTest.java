@@ -7,11 +7,14 @@ import alexheal.eshop.pages.mobile.CatalogPage;
 import alexheal.eshop.pages.mobile.FilterPage;
 import alexheal.eshop.pages.mobile.LoginPage;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Test;
 
 public class FilterTest extends TestBase {
     @Test
     @Owner("ValeevAA")
+    @Severity(SeverityLevel.NORMAL)
     void filterByBrandAndTypeTest() {
         new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());
         new CatalogPage().tapFilter();
@@ -24,6 +27,7 @@ public class FilterTest extends TestBase {
 
     @Test
     @Owner("ValeevAA")
+    @Severity(SeverityLevel.NORMAL)
     void emptyResultTest() {
         new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());
         new CatalogPage().tapFilter();

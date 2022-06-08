@@ -5,11 +5,14 @@ import alexheal.eshop.pages.mobile.CatalogPage;
 import alexheal.eshop.pages.mobile.LoginPage;
 import alexheal.eshop.pages.mobile.ProfilePage;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Test;
 
 public class AuthTest extends TestBase {
     @Test
     @Owner("ValeevAA")
+    @Severity(SeverityLevel.CRITICAL)
     void successAuthorizationDemoUserTest() {
         new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());
         new CatalogPage().tapProfile();
