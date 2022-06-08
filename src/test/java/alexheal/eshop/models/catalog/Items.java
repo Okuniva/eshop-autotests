@@ -1,7 +1,5 @@
 
-package alexheal.eshop.models.api.catalog;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+package alexheal.eshop.models.catalog;
 
 import java.util.List;
 

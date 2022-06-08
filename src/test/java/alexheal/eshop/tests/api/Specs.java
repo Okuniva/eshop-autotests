@@ -16,7 +16,6 @@ public class Specs {
             .baseUri(App.config.apiUrl())
             .basePath("/catalog-api/api/v1")
             .log().all();
-//            .contentType(ContentType.JSON);
 
     public static ResponseSpecification successResponseSpec = new ResponseSpecBuilder()
             .expectStatusCode(200)

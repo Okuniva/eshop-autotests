@@ -1,4 +1,4 @@
-package alexheal.eshop.models.api.catalog;
+package alexheal.eshop.models.catalog;
 
 @lombok.Data
 public class Data {
