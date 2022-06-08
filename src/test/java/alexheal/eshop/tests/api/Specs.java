@@ -3,8 +3,6 @@ package alexheal.eshop.tests.api;
 import alexheal.eshop.config.App;
 import alexheal.eshop.helpers.AllureRestAssuredFilter;
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.parsing.Parser;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 

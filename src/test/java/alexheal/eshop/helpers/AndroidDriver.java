@@ -26,9 +26,10 @@ public class AndroidDriver implements WebDriverProvider {
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName("Android");
         options.setPlatformVersion("9.0");
-        options.setApp(app.getAbsolutePath());
+//        options.setApp(app.getAbsolutePath());
         options.setAppPackage("eShopOnContainers.Droid");
         options.setAppActivity("crc6415fb40349fcf4f4e.SplashActivity");
+
 
         return new io.appium.java_client.android.AndroidDriver(getAppiumServerUrl(), options);
     }
