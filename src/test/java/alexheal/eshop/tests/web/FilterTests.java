@@ -4,6 +4,7 @@ import alexheal.eshop.models.FilterBrand;
 import alexheal.eshop.models.FilterType;
 import alexheal.eshop.pages.web.HomePage;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class FilterTests extends TestBase {
@@ -27,6 +28,7 @@ public class FilterTests extends TestBase {
 
     @Test
     @DisplayName("verify filter by type")
+    @Tag("web_filter")
     void filterByTypeTest() {
         new HomePage().openHomePage()
                 .setType(FilterType.Pin)
