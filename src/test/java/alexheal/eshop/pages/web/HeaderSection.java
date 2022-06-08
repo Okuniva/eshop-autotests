@@ -13,6 +13,7 @@ public class HeaderSection {
         return this;
     }
 
+    @Step("verify username - {username}")
     public HeaderSection verifyUsername(String username) {
         $(".esh-identity-name").as("username")
                 .shouldHave(Condition.exactTextCaseSensitive(username));

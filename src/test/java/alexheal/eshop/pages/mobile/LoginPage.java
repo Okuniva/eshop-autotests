@@ -18,6 +18,7 @@ public class LoginPage {
         return this;
     }
 
+    @Step("verify info label")
     public LoginPage verifyInfoLabel() {
         $(byTestId("InfoLabel")).as("Info label")
                 .shouldHave(Condition.text("ARE YOU REGISTERED?"));

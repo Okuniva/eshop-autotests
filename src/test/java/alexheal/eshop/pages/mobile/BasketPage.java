@@ -23,7 +23,7 @@ public class BasketPage {
         return this;
     }
 
-    @Step("delete item'")
+    @Step("delete item index - {index}")
     public BasketPage deleteItem(int index) {
         Coordinates totalCoordinates = $x("(//*[@content-desc='TotalLabel'])[" + index + "]").getCoordinates();
         Coordinates priceCoordinates = $x("(//*[@content-desc='PriceLabel'])[" + index + "]").getCoordinates();
@@ -40,6 +40,7 @@ public class BasketPage {
         return this;
     }
 
+    @Step("verify total header shouldHave {price}")
     public BasketPage verifyTotalHeader(String price) {
         $(byTestId("ListTotalHeaderLabel")).shouldHave(
                 Condition.text(price));

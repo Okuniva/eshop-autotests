@@ -28,6 +28,7 @@ public class CatalogPage {
         return this;
     }
 
+    @Step("verify name - {name} and price - {price}")
     public CatalogPage verifyItem(String name, String price) {
         $(byTestId("ProductName")).shouldHave(text(name));
         $(byTestId("ProductPrice")).shouldHave(text(price));
@@ -35,6 +36,7 @@ public class CatalogPage {
         return this;
     }
 
+    @Step("verify no products found")
     public CatalogPage verifyNoProductsFound() {
         $(byTestId("NoProductsFoundLabel")).shouldHave(
                 text("NO PRODUCTS FOUND"));

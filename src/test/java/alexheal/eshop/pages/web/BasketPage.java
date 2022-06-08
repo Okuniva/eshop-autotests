@@ -26,6 +26,7 @@ public class BasketPage {
         return this;
     }
 
+    @Step("verify item count - {count} and price - {price}")
     public BasketPage verifyItems(int count, String price) {
         SelenideElement checkoutInfo = $(".esh-basket-checkout").as("checkoutInfo");
         checkoutInfo.shouldHave(Condition.text("(" + count + " items)"));

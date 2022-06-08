@@ -72,6 +72,7 @@ public class HomePage {
         return this;
     }
 
+    @Step("verify showing message")
     public HomePage verifyShowingMessage(int showingProducts, int allProducts, int currentPage, int allPages) {
         $(byTagAndText("span", String.format("Showing %d of %d products - Page %d - %d",
                 showingProducts, allProducts, currentPage, allPages)))
@@ -80,6 +81,7 @@ public class HomePage {
         return this;
     }
 
+    @Step("verify username - {username}")
     public HomePage verifyNoResultsFindMessage() {
         $(byTagAndText("span", "THERE ARE NO RESULTS THAT MATCH YOUR SEARCH"))
                 .shouldBe(visible);

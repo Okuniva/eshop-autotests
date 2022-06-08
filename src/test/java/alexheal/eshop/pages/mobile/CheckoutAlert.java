@@ -18,6 +18,7 @@ public class CheckoutAlert {
         return this;
     }
 
+    @Step("verify order success alert")
     public CheckoutAlert verifyOrderSuccess() {
         $(AppiumBy.id("eShopOnContainers.Droid:id/alertTitle")).shouldHave(
                 text("Checkout"));
