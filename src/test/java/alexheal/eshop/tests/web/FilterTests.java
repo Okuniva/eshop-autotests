@@ -3,12 +3,15 @@ package alexheal.eshop.tests.web;
 import alexheal.eshop.models.FilterBrand;
 import alexheal.eshop.models.FilterType;
 import alexheal.eshop.pages.web.HomePage;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("filter")
 public class FilterTests extends TestBase {
     @Test
+    @Owner("ValeevAA")
     @DisplayName("verify filter no results find message")
     void emptyResultTest() {
         new HomePage().openHomePage()
@@ -18,6 +21,7 @@ public class FilterTests extends TestBase {
     }
 
     @Test
+    @Owner("ValeevAA")
     @DisplayName("verify filter by brand")
     void filterByBrandTest() {
         new HomePage().openHomePage()
@@ -27,8 +31,8 @@ public class FilterTests extends TestBase {
     }
 
     @Test
+    @Owner("ValeevAA")
     @DisplayName("verify filter by type")
-    @Tag("web_filter")
     void filterByTypeTest() {
         new HomePage().openHomePage()
                 .setType(FilterType.Pin)

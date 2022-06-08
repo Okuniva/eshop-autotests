@@ -1,6 +1,7 @@
 package alexheal.eshop.tests.api;
 
 import alexheal.eshop.models.catalog.Items;
+import io.qameta.allure.Owner;
 import io.qameta.allure.Param;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -22,6 +23,7 @@ import static org.hamcrest.Matchers.is;
 @Tag("catalog")
 public class CatalogTests {
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
+    @Owner("ValeevAA")
     @DisplayName("success get items")
     @CsvSource(value = {
             "10, 0, 14",
@@ -53,6 +55,7 @@ public class CatalogTests {
     }
 
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
+    @Owner("ValeevAA")
     @DisplayName("negative 500 server error")
     @ValueSource(ints = {-Integer.MAX_VALUE, -100, -10, -1, 0})
     void negativeServerErrorTest(@Param("pageSize") int pageSize) {
@@ -69,6 +72,7 @@ public class CatalogTests {
     }
 
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
+    @Owner("ValeevAA")
     @DisplayName("negative page size param 400 error")
     @ValueSource(strings = {"null", "'", "й"})
     void negativePageSizeTest(@Param("pageSize") String pageSize) {
@@ -86,6 +90,7 @@ public class CatalogTests {
     }
 
     @Test
+    @Owner("ValeevAA")
     @DisplayName("negative empty page size param 400 error")
     void negativeEmptyPageSizeTest() {
         String instance = format("/Catalog/items?pageSize=%s", "");

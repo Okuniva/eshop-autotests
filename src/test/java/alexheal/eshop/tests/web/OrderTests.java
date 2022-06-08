@@ -2,11 +2,15 @@ package alexheal.eshop.tests.web;
 
 import alexheal.eshop.config.App;
 import alexheal.eshop.pages.web.*;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("order")
 public class OrderTests extends TestBase {
     @Test
+    @Owner("ValeevAA")
     @DisplayName("verify text in order toasts")
     void orderTest() {
         // ToDo add api request to clear basket

@@ -5,11 +5,15 @@ import alexheal.eshop.pages.web.HeaderSection;
 import alexheal.eshop.pages.web.HomePage;
 import alexheal.eshop.pages.web.LoginPage;
 import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("auth")
 public class AuthTests extends TestBase {
     @Test
+    @Owner("ValeevAA")
     @Description("verify authorization user should have username in header")
     @DisplayName("success authorization demo user test")
     void successAuthorizationDemoUserTest() {
