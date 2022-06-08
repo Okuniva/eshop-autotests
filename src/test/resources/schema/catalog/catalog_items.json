@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "pageIndex": {
+      "type": "integer"
+    },
+    "pageSize": {
+      "type": "integer"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": ["string", "null"]
+          },
+          "description": {
+            "type": ["string", "null"]
+          },
+          "price": {
+            "type": "number"
+          },
+          "pictureFileName": {
+            "type": ["string", "null"]
+          },
+          "pictureUri": {
+            "type": ["string", "null"]
+          },
+          "catalogTypeId": {
+            "type": "integer"
+          },
+          "catalogType": {
+            "type": ["object", "null"],
+            "properties": {
+              "id": { "type": "integer" },
+              "type": { "type": ["string", "null"] }
+            }
+          },
+          "catalogBrandId": {
+            "type": "integer"
+          },
+          "catalogBrand": {
+            "type": ["object", "null"],
+            "properties": {
+              "id": { "type": "integer" },
+              "brand": { "type": ["string", "null"] }
+            }
+          },
+          "availableStock": {
+            "type": "integer"
+          },
+          "restockThreshold": {
+            "type": "integer"
+          },
+          "maxStockThreshold": {
+            "type": "integer"
+          },
+          "onReorder": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "description",
+          "price",
+          "pictureFileName",
+          "pictureUri",
+          "catalogTypeId",
+          "catalogType",
+          "catalogBrandId",
+          "catalogBrand",
+          "availableStock",
+          "restockThreshold",
+          "maxStockThreshold",
+          "onReorder"
+        ]
+      }
+    }
+  },
+  "required": [
+    "pageIndex",
+    "pageSize",
+    "count",
+    "data"
+  ]
+}

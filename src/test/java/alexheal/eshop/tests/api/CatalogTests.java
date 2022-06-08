@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alexheal.eshop.tests.api.Specs.request;
 import static alexheal.eshop.tests.api.Specs.successResponseSpec;
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CatalogTests {
@@ -29,6 +30,7 @@ public class CatalogTests {
                 .get(endPoint)
                 .then()
                 .spec(successResponseSpec)
+                .body(matchesJsonSchemaInClasspath("schema/catalog/catalog_items.json"))
                 .extract().as(Items.class);
 
         assertThat(items.pageSize).isEqualTo(pageSize);
