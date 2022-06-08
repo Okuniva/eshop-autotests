@@ -1,10 +1,7 @@
 package alexheal.eshop.tests.api;
 
 import alexheal.eshop.models.catalog.Items;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Param;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -23,9 +20,11 @@ import static org.hamcrest.Matchers.is;
 
 @Tag("api")
 @Tag("catalog")
+@Feature("api")
 public class CatalogTests {
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
     @Owner("ValeevAA")
+    @Story("success")
     @DisplayName("success get items")
     @Severity(SeverityLevel.CRITICAL)
     @CsvSource(value = {
@@ -60,6 +59,7 @@ public class CatalogTests {
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
     @Owner("ValeevAA")
     @DisplayName("negative 500 server error")
+    @Story("negative")
     @Severity(SeverityLevel.BLOCKER)
     @ValueSource(ints = {-Integer.MAX_VALUE, -100, -10, -1, 0})
     void negativeServerErrorTest(@Param("pageSize") int pageSize) {
@@ -78,6 +78,7 @@ public class CatalogTests {
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
     @Owner("ValeevAA")
     @DisplayName("negative page size param 400 error")
+    @Story("negative")
     @Severity(SeverityLevel.NORMAL)
     @ValueSource(strings = {"null", "'", "й"})
     void negativePageSizeTest(@Param("pageSize") String pageSize) {
@@ -97,6 +98,7 @@ public class CatalogTests {
     @Test
     @Owner("ValeevAA")
     @DisplayName("negative empty page size param 400 error")
+    @Story("negative")
     @Severity(SeverityLevel.MINOR)
     void negativeEmptyPageSizeTest() {
         String instance = format("/Catalog/items?pageSize=%s", "");

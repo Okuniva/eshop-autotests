@@ -7,6 +7,8 @@ import alexheal.eshop.helpers.DriverUtils;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -15,6 +17,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith({ScreenShooterExtension.class})
 @Tag("web")
+@Epic("web")
 public class TestBase {
     @BeforeAll
     static void beforeAll() {

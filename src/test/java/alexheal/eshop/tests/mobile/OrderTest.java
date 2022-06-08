@@ -2,11 +2,13 @@ package alexheal.eshop.tests.mobile;
 
 import alexheal.eshop.config.App;
 import alexheal.eshop.pages.mobile.*;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Test;
 
+@Feature("order")
 public class OrderTest extends TestBase {
     @Test
     @Owner("ValeevAA")
