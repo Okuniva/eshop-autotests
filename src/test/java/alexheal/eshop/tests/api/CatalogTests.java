@@ -24,7 +24,7 @@ import static org.hamcrest.Matchers.is;
 public class CatalogTests {
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
     @Owner("ValeevAA")
-    @Story("success")
+    @Story("positive")
     @DisplayName("success get items")
     @Severity(SeverityLevel.CRITICAL)
     @CsvSource(value = {
