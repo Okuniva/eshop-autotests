@@ -43,3 +43,4 @@ target/
 src/test/resources/config/local.properties
 src/test/resources/config/remote.properties
 /src/test/resources/apk/
+src/test/resources/config/selenoid/local.properties
