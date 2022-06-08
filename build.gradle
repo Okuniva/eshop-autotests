@@ -92,16 +92,19 @@ test {
 
 
 task web_test(type: Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform {
         includeTags "web"
     }
 }
 task mobile_test(type: Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform {
         includeTags "mobile"
     }
 }
 task api_test(type: Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform {
         includeTags "api"
     }
