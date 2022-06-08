@@ -1,4 +1,4 @@
-package alexheal.eshop.tests.ui;
+package alexheal.eshop.tests.web;
 
 import alexheal.eshop.config.Project;
 import alexheal.eshop.helpers.AllureAttachments;
@@ -10,9 +10,11 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith({ScreenShooterExtension.class})
+@Tag("web")
 public class TestBase {
     @BeforeAll
     static void beforeAll() {

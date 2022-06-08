@@ -1,4 +1,4 @@
-package alexheal.eshop.tests.ui;
+package alexheal.eshop.tests.web;
 
 import alexheal.eshop.config.App;
 import alexheal.eshop.pages.web.*;

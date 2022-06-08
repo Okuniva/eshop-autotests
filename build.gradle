@@ -89,3 +89,20 @@ test {
         }
     }
 }
+
+
+task web_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "web"
+    }
+}
+task mobile_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "mobile"
+    }
+}
+task api_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "api"
+    }
+}
