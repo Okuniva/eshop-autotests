@@ -35,10 +35,6 @@ public class AllureAttachments {
         return DriverUtils.getPageSourceAsBytes();
     }
 
-    public static void removeParameters() {
-        Allure.getLifecycle().updateStep(step -> step.setParameters(new LinkedList<>()));
-    }
-
     public static void addVideo(String sessionId) {
         URL videoUrl = DriverUtils.getVideoUrl(sessionId);
         if (videoUrl != null) {
