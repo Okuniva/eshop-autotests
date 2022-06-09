@@ -70,7 +70,9 @@ compileTestJava {
 
 test {
     systemProperties(System.getProperties())
-    useJUnitPlatform()
+    useJUnitPlatform {
+        includeTags System.getProperty("tag").toString()
+    }
 
     if (System.getProperty("threads") != null) {
         systemProperties += [
@@ -87,25 +89,5 @@ test {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
-    }
-}
-
-
-task web_test(type: Test) {
-    systemProperties(System.getProperties())
-    useJUnitPlatform {
-        includeTags "web"
-    }
-}
-task mobile_test(type: Test) {
-    systemProperties(System.getProperties())
-    useJUnitPlatform {
-        includeTags "mobile"
-    }
-}
-task api_test(type: Test) {
-    systemProperties(System.getProperties())
-    useJUnitPlatform {
-        includeTags "api"
     }
 }
