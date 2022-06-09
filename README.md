@@ -25,14 +25,25 @@
 <a href="https://github.com/allure-framework/allure2/"><img src="img/logo/Allure.svg" width="50" height="50" alt="Allure"/></a>
 </p>
 
-
-## Web UI part
 <details>
-<summary><h3>Covered functionality</h3></summary>
+    <summary><h2>Web UI part</h2></summary>
 
-- [X] Auth Tests
-- [X] Filter Tests
-- [X] HomePage Tests
+*   <details>
+        <summary><h3> :white_check_mark: Covered functionality</h3></summary>
+        <ul>
+            <li>[X] Auth Tests </li>
+            <li>[X] Filter Tests </li>
+            <li>[X] HomePage Tests </li>
+        </ul>
+    </details>
 
+*   <details>
+        <summary><h3>Covered functionality2</h3></summary>
+        <ul>
+            <li>[X] Auth Tests </li>
+            <li>[X] Filter Tests </li>
+            <li>[X] HomePage Tests </li>
+        </ul>
+    </details>
 </details>
 
