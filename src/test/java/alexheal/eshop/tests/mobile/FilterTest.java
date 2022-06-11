@@ -6,13 +6,10 @@ import alexheal.eshop.models.FilterType;
 import alexheal.eshop.pages.mobile.CatalogPage;
 import alexheal.eshop.pages.mobile.FilterPage;
 import alexheal.eshop.pages.mobile.LoginPage;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.Test;
 
-@Feature("filter")
+@Story("filter")
 public class FilterTest extends TestBase {
     @Test
     @Owner("ValeevAA")
