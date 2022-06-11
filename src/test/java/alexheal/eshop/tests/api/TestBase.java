@@ -1,11 +1,13 @@
 package alexheal.eshop.tests.api;
 
+import alexheal.eshop.config.App;
 import alexheal.eshop.helpers.AndroidDriver;
 import alexheal.eshop.helpers.allure.AllureAttachments;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import io.qameta.allure.Feature;
 import io.qameta.allure.selenide.AllureSelenide;
+import io.restassured.RestAssured;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,6 +23,6 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 public class TestBase {
     @BeforeAll
     public static void beforeAll() {
-        addListener("AllureSelenide", new AllureSelenide());
+        RestAssured.baseURI = App.config.apiUrl();
     }
 }

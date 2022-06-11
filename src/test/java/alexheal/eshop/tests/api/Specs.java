@@ -11,7 +11,6 @@ import static io.restassured.RestAssured.with;
 public class Specs {
     public static RequestSpecification request = with()
             .filter(AllureRestAssuredFilter.withCustomTemplates())
-            .baseUri(App.config.apiUrl())
             .basePath("/catalog-api/api/v1")
             .log().all();
 
