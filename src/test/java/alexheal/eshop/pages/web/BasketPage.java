@@ -9,13 +9,16 @@ import static com.codeborne.selenide.Condition.cssValue;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selenide.$;
+import static io.qameta.allure.Allure.step;
 
 public class BasketPage {
     public BasketPage() {
-        $(".esh-app-header")
-                .shouldHave(cssValue("height", "208px"));
-        $(byTagAndText("h1", "[ Shopping Bag ]"))
-                .shouldBe(visible);
+        step("wait header size", () -> {
+            $(".esh-app-header")
+                    .shouldHave(cssValue("height", "208px"));
+            $(byTagAndText("h1", "[ Shopping Bag ]"))
+                    .shouldBe(visible);
+        });
     }
 
     @Step("click 'Checkout'")
