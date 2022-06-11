@@ -18,9 +18,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 
-@Tag("api")
-@Feature("api")
-public class CatalogTests {
+@Story("catalog")
+public class CatalogTests extends TestBase {
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
     @Owner("ValeevAA")
     @Story("positive")
