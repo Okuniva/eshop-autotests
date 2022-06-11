@@ -1,8 +1,6 @@
 package alexheal.eshop.pages.mobile;
 
-import alexheal.eshop.helpers.AllureAttachments;
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SetValueOptions;
 import io.qameta.allure.Step;
 
 import static alexheal.eshop.helpers.DriverUtils.byTestId;

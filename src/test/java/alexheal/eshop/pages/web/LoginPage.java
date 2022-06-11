@@ -1,6 +1,5 @@
 package alexheal.eshop.pages.web;
 
-import alexheal.eshop.helpers.AllureAttachments;
 import com.codeborne.selenide.SetValueOptions;
 import io.qameta.allure.Param;
 import io.qameta.allure.Step;

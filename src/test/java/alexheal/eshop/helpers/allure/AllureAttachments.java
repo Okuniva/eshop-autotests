@@ -1,5 +1,6 @@
-package alexheal.eshop.helpers;
+package alexheal.eshop.helpers.allure;
 
+import alexheal.eshop.helpers.DriverUtils;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import org.slf4j.Logger;
@@ -9,7 +10,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.LinkedList;
 
 import static com.codeborne.selenide.Selenide.sleep;
 

@@ -1,4 +1,4 @@
-package alexheal.eshop.helpers;
+package alexheal.eshop.helpers.allure;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 

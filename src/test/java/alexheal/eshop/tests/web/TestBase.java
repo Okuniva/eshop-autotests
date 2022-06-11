@@ -1,9 +1,10 @@
 package alexheal.eshop.tests.web;
 
 import alexheal.eshop.config.Project;
-import alexheal.eshop.helpers.AllureAttachments;
+import alexheal.eshop.helpers.allure.AllureAttachments;
 import alexheal.eshop.helpers.DriverSettings;
 import alexheal.eshop.helpers.DriverUtils;
+import alexheal.eshop.helpers.allure.Layer;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -17,7 +18,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith({ScreenShooterExtension.class})
 @Tag("web")
-@Epic("web")
+@Feature("web")
+@Layer("web")
 public class TestBase {
     @BeforeAll
     static void beforeAll() {

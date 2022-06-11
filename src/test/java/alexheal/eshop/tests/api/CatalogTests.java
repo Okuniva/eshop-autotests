@@ -19,7 +19,6 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 
 @Tag("api")
-@Tag("catalog")
 @Feature("api")
 public class CatalogTests {
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")

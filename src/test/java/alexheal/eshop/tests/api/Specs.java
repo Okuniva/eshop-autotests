@@ -1,7 +1,7 @@
 package alexheal.eshop.tests.api;
 
 import alexheal.eshop.config.App;
-import alexheal.eshop.helpers.AllureRestAssuredFilter;
+import alexheal.eshop.helpers.allure.AllureRestAssuredFilter;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
