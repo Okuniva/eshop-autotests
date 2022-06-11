@@ -57,7 +57,6 @@ public class CatalogTests extends TestBase {
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
     @Owner("ValeevAA")
     @DisplayName("negative 500 server error")
-    @Story("negative")
     @Severity(SeverityLevel.BLOCKER)
     @ValueSource(ints = {Integer.MIN_VALUE, -100, -10, -1, 0})
     void negativeServerErrorTest(@Param("pageSize") int pageSize) {
@@ -76,7 +75,6 @@ public class CatalogTests extends TestBase {
     @ParameterizedTest(name = "{displayName} [{argumentsWithNames}]")
     @Owner("ValeevAA")
     @DisplayName("negative page size param 400 error")
-    @Story("negative")
     @Severity(SeverityLevel.NORMAL)
     @ValueSource(strings = {"null", "'", "й"})
     void negativePageSizeTest(@Param("pageSize") String pageSize) {
@@ -96,7 +94,6 @@ public class CatalogTests extends TestBase {
     @Test
     @Owner("ValeevAA")
     @DisplayName("negative empty page size param 400 error")
-    @Story("negative")
     @Severity(SeverityLevel.MINOR)
     void negativeEmptyPageSizeTest() {
         String instance = format("/Catalog/items?pageSize=%s", "");
