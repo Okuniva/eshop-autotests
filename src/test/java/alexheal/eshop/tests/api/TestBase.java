@@ -3,6 +3,7 @@ package alexheal.eshop.tests.api;
 import alexheal.eshop.config.App;
 import alexheal.eshop.helpers.AndroidDriver;
 import alexheal.eshop.helpers.allure.AllureAttachments;
+import alexheal.eshop.helpers.allure.Layer;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import io.qameta.allure.Feature;
@@ -20,6 +21,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 
 @Tag("api")
 @Feature("api")
+@Layer("api")
 public class TestBase {
     @BeforeAll
     public static void beforeAll() {

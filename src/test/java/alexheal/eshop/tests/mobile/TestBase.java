@@ -2,6 +2,7 @@ package alexheal.eshop.tests.mobile;
 
 import alexheal.eshop.helpers.allure.AllureAttachments;
 import alexheal.eshop.helpers.AndroidDriver;
+import alexheal.eshop.helpers.allure.Layer;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import io.qameta.allure.Epic;
@@ -20,6 +21,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 @ExtendWith({ScreenShooterExtension.class})
 @Tag("mobile")
 @Feature("mobile")
+@Layer("mobile")
 public class TestBase {
     @BeforeAll
     public static void beforeAll() {
