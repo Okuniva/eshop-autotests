@@ -25,8 +25,8 @@
 <a href="https://github.com/allure-framework/allure2/"><img src="img/logo/Allure.svg" width="50" height="50" alt="Allure"/></a>
 </p>
 
-<details>
-    <summary><h2>Web UI part</h2></summary>
+<details open>
+    <summary><h2>:globe_with_meridians:	Web UI part</h2></summary>
 
 *   <details>
         <summary><h3> :white_check_mark: Covered functionality</h3></summary>
@@ -38,12 +38,9 @@
     </details>
 
 *   <details>
-        <summary><h3>Covered functionality2</h3></summary>
-        <ul>
-            <li>[X] Auth Tests </li>
-            <li>[X] Filter Tests </li>
-            <li>[X] HomePage Tests </li>
-        </ul>
+        <summary><h3>Jenkins</h3></summary>
     </details>
 </details>
+
+## // in progress
 
