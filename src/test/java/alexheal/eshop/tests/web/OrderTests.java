@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 @Story("order")
 public class OrderTests extends TestBase {
     @Test
+    @AllureId("10541")
     @Owner("ValeevAA")
     @DisplayName("verify text in order toasts")
     @Severity(SeverityLevel.CRITICAL)
