@@ -6,6 +6,8 @@
 ### Web UI & API - <a target="_blank" href="https://github.com/dotnet-architecture/eShopOnContainers">eShopOnContainers</a>
 ### Mobile - <a target="_blank" href="https://github.com/dotnet-architecture/eshop-mobile-client">eshop mobile client</a>
 
+// readme in progress
+
 ## :open_book: Content
 
 - [Technology stack](#Technology-stack)
