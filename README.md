@@ -9,7 +9,6 @@
 ## :open_book: Content
 
 - [Technology stack](#Technology-stack)
-- [Web UI part](#:globe_with_meridians:-Web-UI-part)
 
 ##  Technology stack
 
