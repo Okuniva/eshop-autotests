@@ -25,22 +25,84 @@
 <a href="https://github.com/allure-framework/allure2/"><img src="img/logo/Allure.svg" width="50" height="50" alt="Allure"/></a>
 </p>
 
-<details open>
-    <summary><h2>:globe_with_meridians:	Web UI part</h2></summary>
+<details open><summary><h2> Shared part</h2></summary>
 
-*   <details>
-        <summary><h3> :white_check_mark: Covered functionality</h3></summary>
-        <ul>
-            <li>[X] Auth Tests </li>
-            <li>[X] Filter Tests </li>
-            <li>[X] HomePage Tests </li>
-        </ul>
-    </details>
+<h3> 
+<img src="img/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/eshop-autotests/">pipeline</a>
+</h3>
 
-*   <details>
-        <summary><h3>Jenkins</h3></summary>
-    </details>
+### build with param screen
+*For launch remote tests it's necessary to click the option <code><strong>*Собрать с параметрами*</strong></code>, then to fill build settings and to click the button <code><strong>*Собрать*</strong></code>.*
+<p align="center">
+<a href="https://jenkins.autotests.cloud/job/eshop-autotests/">
+<img src="img/screens/JenkinsParam.png" alt="Jenkins"/></a>
+</p>
+
+After tests execution, in the panel <code><strong>*История сборок*</strong></code> in the row with build number
+icons <img width="2%" title="Allure Report" src="img/logo/Allure.svg"><code><strong>*Allure Report*</strong></code>
+and <img width="2%" title="Allure TestOps" src="img/logo/Allure_TO.svg"><code><strong>*Allure TestOps*</strong></code> will appear.
+
+*Icon <img width="2%" title="Allure Report" src="img/logo/Allure.svg"><code><strong>*Allure Report*</strong></code> opens
+html-report in Allure Report.*
+
+*Icon <img width="2%" title="Allure TestOps" src="img/logo/Allure_TO.svg"><code><strong>*Allure TestOps*</strong></code> opens
+html-report in Allure TestOps.*
+
+<p align="center">
+<a href="https://jenkins.autotests.cloud/job/eshop-autotests/">
+<img src="img/screens/JenkinsMain.png" alt="Jenkins"/></a>
+</p>
+
 </details>
 
-## // in progress
+<details open><summary><h2>:globe_with_meridians: Web UI part</h2></summary>
 
+<h3> :white_check_mark: Covered functionality</h3>
+    <ul>
+        <li>[X] Auth Tests </li>
+        <li>[X] Filter Tests </li>
+        <li>[X] HomePage Tests </li>
+    </ul>
+
+
+## <img width="4%" title="Allure Report" src="img/logo/Allure.svg"> Tests results report in [Allure Report](https://jenkins.autotests.cloud/job/eshop-autotests/114/allure/)
+
+### :pushpin: Common information
+
+*Allure report main page contains next information blocks:*
+> - [x] <code><strong>*ALLURE REPORT*</strong></code> -  date and time of tests launch, total number of executed cases and the diagram with indication of percentage and number of successful, failed and broken tests
+>- [x] <code><strong>*TREND*</strong></code> - displays trend of passing tests from one build to another
+>- [x] <code><strong>*SUITES*</strong></code> - displays the distribution of tests results by tests suites
+>- [x] <code><strong>*ENVIRONMENT*</strong></code> - displays test environment where tests were launched
+>- [x] <code><strong>*CATEGORIES*</strong></code> - displays the distribution of failed tests by types of defects
+>- [x] <code><strong>*FEATURES BY STORIES*</strong></code> - displays the distribution of tests by functionality, which they check
+>- [x] <code><strong>*EXECUTORS*</strong></code> - displays the executor of the current build (link to Jenkins build)
+
+<p align="center">
+  <img src="img/screens/AllureMain.png" alt="Allure Report" width="900">
+</p>
+
+## <img width="4%" title="Allure TestOPS" src="img/logo/Allure_TO.svg"> [Allure TestOps](https://allure.autotests.cloud/launch/13303) integration
+
+### :pushpin: Overview dashboard
+
+<p align="center">
+  <img src="img/screens/AllureTOMain.png" alt="dashboards" width="900">
+</p>
+
+## <img width="4%" title="Telegram" src="img/logo/Telegram.svg"> Telegram notifications using a bot
+
+> After the pipeline is completed, created <code>Telegram</code>-bot automatically handles and sends a message with a test run report.
+
+<p align="center">
+<img title="Telegram Notifications" src="img/screens/WebTelegram.png">
+</p>
+
+## <img width="4%" title="Selenoid" src="img/logo/Selenoid.svg"> Example of test execution in Selenoid
+
+> A video is attached to each test in the report.
+
+</details>
+
+
+// in progress
