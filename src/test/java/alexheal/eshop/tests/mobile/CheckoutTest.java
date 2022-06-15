@@ -7,7 +7,7 @@ import alexheal.eshop.pages.mobile.LoginPage;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.Test;
 
-@Feature("checkout")
+@Story("checkout")
 public class CheckoutTest extends TestBase {
     @Test
     @Owner("ValeevAA")
