@@ -8,10 +8,6 @@
 
 // readme in progress
 
-## :open_book: Content
-
-- [Technology stack](#Technology-stack)
-
 ##  Technology stack
 
 <p align="center">
@@ -26,10 +22,10 @@
 <a href="https://github.com/allure-framework/allure2/"><img src="img/logo/Allure.svg" width="50" height="50" alt="Allure"/></a>
 </p>
 
-<details open><summary><h2>:arrows_clockwise: Shared part</h2></summary>
+<details open><summary><h2>:arrows_counterclockwise: Shared part</h2></summary>
 
 <h3> 
-<img src="img/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/eshop-autotests/">pipeline</a>
+<img src="img/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/eshop-autotests/">pipeline.</a> For access to jenkins contact to me.
 </h3>
 
 ### build with param screen
