@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class FilterPage {
     @Step("set filter brand - {brand}")
     public FilterPage setBrand(FilterBrand brand) {
-        $(byTestId("BrandPicker")).click();
+        $(byTestId("BrandPicker_Container")).click();
         $x("//*[contains(@text, '" + brand.text + "')]").click();
 
         return this;
