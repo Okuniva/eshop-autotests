@@ -9,7 +9,15 @@ import org.aeonbits.owner.Config;
         "classpath:config/mobile/androidRemote.properties"
 })
 public interface AndroidConfig extends Config {
-    String remoteDriverUrl();
+    String server();
+
+    String username();
+
+    String access_key();
+
+    String url();
 
     String videoStorage();
+
+    String remoteDriverUrl();
 }

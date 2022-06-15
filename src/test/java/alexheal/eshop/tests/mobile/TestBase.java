@@ -1,11 +1,10 @@
 package alexheal.eshop.tests.mobile;
 
+import alexheal.eshop.drivers.BrowserstackMobileDriver;
 import alexheal.eshop.helpers.allure.AllureAttachments;
-import alexheal.eshop.helpers.AndroidDriver;
 import alexheal.eshop.helpers.allure.Layer;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.junit5.ScreenShooterExtension;
-import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -19,7 +18,6 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 
 @ExtendWith({ScreenShooterExtension.class})
-@Tag("mobile")
 @Feature("mobile")
 @Layer("mobile")
 public class TestBase {
@@ -27,8 +25,8 @@ public class TestBase {
     public static void beforeAll() {
         addListener("AllureSelenide", new AllureSelenide());
 
+        Configuration.browser = BrowserstackMobileDriver.class.getName();
         Configuration.browserSize = null;
-        Configuration.browser = AndroidDriver.class.getName();
     }
 
     @BeforeEach

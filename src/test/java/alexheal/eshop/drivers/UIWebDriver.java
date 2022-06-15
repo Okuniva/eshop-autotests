@@ -1,4 +1,4 @@
-package alexheal.eshop.helpers;
+package alexheal.eshop.drivers;
 
 import alexheal.eshop.config.App;
 import alexheal.eshop.config.Project;
@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DriverSettings {
+public class UIWebDriver {
     public static void configure() {
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();

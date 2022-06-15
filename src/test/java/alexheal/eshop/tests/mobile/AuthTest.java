@@ -5,9 +5,11 @@ import alexheal.eshop.pages.mobile.CatalogPage;
 import alexheal.eshop.pages.mobile.LoginPage;
 import alexheal.eshop.pages.mobile.ProfilePage;
 import io.qameta.allure.*;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Feature("auth")
+@Tag("mobile")
 public class AuthTest extends TestBase {
     @Test
     @Owner("ValeevAA")

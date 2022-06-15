@@ -2,13 +2,12 @@ package alexheal.eshop.tests.web;
 
 import alexheal.eshop.config.Project;
 import alexheal.eshop.helpers.allure.AllureAttachments;
-import alexheal.eshop.helpers.DriverSettings;
+import alexheal.eshop.drivers.UIWebDriver;
 import alexheal.eshop.helpers.DriverUtils;
 import alexheal.eshop.helpers.allure.Layer;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -24,7 +23,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        DriverSettings.configure();
+        UIWebDriver.configure();
     }
 
     @AfterEach
