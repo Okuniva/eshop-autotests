@@ -2,7 +2,6 @@ package alexheal.eshop.drivers;
 
 import alexheal.eshop.config.Android;
 import com.codeborne.selenide.WebDriverProvider;
-import com.codeborne.selenide.conditions.And;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -20,8 +19,8 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.merge(capabilities);
 
-        caps.setCapability("browserstack.user", Android.config.username());
-        caps.setCapability("browserstack.key", Android.config.access_key());
+        caps.setCapability("browserstack.user", Android.config.bs_username());
+        caps.setCapability("browserstack.key", Android.config.bs_access_key());
 
         caps.setCapability("app", "bs://6812b6acb6107c49131dea6bed63264b1f3c4857");
 
@@ -46,7 +45,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
 
     public static URL getBrowserstackUrl() {
         try {
-            String url = "http://" + Android.config.username() + ":" + Android.config.access_key() + "@" + "hub.browserstack.com" + "/wd/hub";
+            String url = "http://" + Android.config.bs_username() + ":" + Android.config.bs_access_key() + "@" + "hub.browserstack.com" + "/wd/hub";
             return new URL(url);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);

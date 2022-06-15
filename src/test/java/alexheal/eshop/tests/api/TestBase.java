@@ -15,6 +15,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class TestBase {
     @BeforeAll
     public static void beforeAll() {
-        RestAssured.baseURI = App.config.apiUrl();
+        RestAssured.baseURI = App.config.webUrl();
     }
 }
