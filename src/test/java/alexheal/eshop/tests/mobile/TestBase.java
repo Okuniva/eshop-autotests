@@ -20,6 +20,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 @ExtendWith({ScreenShooterExtension.class})
 @Feature("mobile")
 @Layer("mobile")
+@Tag("mobile")
 public class TestBase {
     @BeforeAll
     public static void beforeAll() {
