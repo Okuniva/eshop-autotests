@@ -12,7 +12,6 @@ import org.junit.jupiter.api.Test;
 public class AuthTest extends TestBase {
     @Test
     @Owner("ValeevAA")
-    @Story("success auth")
     @Severity(SeverityLevel.CRITICAL)
     void successAuthorizationDemoUserTest() {
         new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());

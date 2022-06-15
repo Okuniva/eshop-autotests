@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 public class CheckoutTest extends TestBase {
     @Test
     @Owner("ValeevAA")
-    @Story("delete items")
     @Severity(SeverityLevel.CRITICAL)
     void deleteItemsTest() {
         new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());
