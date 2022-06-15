@@ -4,8 +4,10 @@ import alexheal.eshop.config.App;
 import alexheal.eshop.pages.mobile.CatalogPage;
 import alexheal.eshop.pages.mobile.LoginPage;
 import alexheal.eshop.pages.mobile.ProfilePage;
-import io.qameta.allure.*;
-import org.junit.jupiter.api.Tag;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 
 @Story("auth")

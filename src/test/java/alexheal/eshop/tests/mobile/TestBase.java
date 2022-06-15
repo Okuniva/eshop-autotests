@@ -13,6 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import static alexheal.eshop.helpers.DriverUtils.getSessionId;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
@@ -40,5 +41,7 @@ public class TestBase {
         AllureAttachments.addScreenshotAs("Last screenshot");
 
         closeWebDriver();
+        // ToDo enable get video
+        //AllureAttachments.addBSVideo(getSessionId());
     }
 }

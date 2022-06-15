@@ -1,5 +1,6 @@
 package alexheal.eshop.helpers;
 
+import alexheal.eshop.config.Android;
 import alexheal.eshop.config.Project;
 import com.codeborne.selenide.Selenide;
 import io.appium.java_client.AppiumBy;
@@ -16,6 +17,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static io.restassured.RestAssured.given;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class DriverUtils {
@@ -47,6 +49,17 @@ public class DriverUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static String getBSVideoUrl(String sessionId) {
+        return given()
+                .auth().basic(Android.config.bs_username(), Android.config.bs_access_key())
+                .when()
+                .get("https://api-cloud.browserstack.com/app-automate/sessions/" + sessionId + ".json")
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("automation_session.video_url");
     }
 
     public static String getConsoleLogs() { // todo refactor

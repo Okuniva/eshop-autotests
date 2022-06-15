@@ -1,5 +1,7 @@
 package alexheal.eshop.helpers.allure;
 
+import alexheal.eshop.config.Android;
+import alexheal.eshop.config.App;
 import alexheal.eshop.helpers.DriverUtils;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
@@ -12,6 +14,7 @@ import java.io.InputStream;
 import java.net.URL;
 
 import static com.codeborne.selenide.Selenide.sleep;
+import static io.restassured.RestAssured.given;
 
 public class AllureAttachments {
     public static final Logger LOGGER = LoggerFactory.getLogger(AllureAttachments.class);
@@ -56,5 +59,12 @@ public class AllureAttachments {
                 Allure.addAttachment("Video", "video/mp4", videoInputStream, "mp4");
             }
         }
+    }
+
+    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
+    public static String addBSVideo(String sessionId) {
+        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
+                + DriverUtils.getBSVideoUrl(sessionId)
+                + "' type='video/mp4'></video></body></html>";
     }
 }
