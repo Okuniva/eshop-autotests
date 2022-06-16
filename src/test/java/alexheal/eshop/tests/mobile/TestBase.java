@@ -23,8 +23,9 @@ public class TestBase {
     public static void beforeAll() {
         addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.browser = BrowserstackMobileDriver.class.getName();
+        closeWebDriver();
         Configuration.browserSize = null;
+        Configuration.browser = BrowserstackMobileDriver.class.getName();
     }
 
     @BeforeEach
