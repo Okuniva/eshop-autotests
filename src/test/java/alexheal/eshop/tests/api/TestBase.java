@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Tags;
 
 import static com.codeborne.selenide.Selenide.open;
 
-@Tag("api")
 @Feature("api")
 @Tags({@Tag("api"), @Tag("all")})
 public class TestBase {
