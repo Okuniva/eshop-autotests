@@ -58,7 +58,7 @@ public class CatalogTests extends TestBase {
     @Owner("ValeevAA")
     @DisplayName("negative 500 server error")
     @Severity(SeverityLevel.BLOCKER)
-    @ValueSource(ints = {Integer.MIN_VALUE, -100, -10, -1, 0})
+    @ValueSource(ints = {Integer.MIN_VALUE, -100, -10, -1})
     void negativeServerErrorTest(@Param("pageSize") int pageSize) {
         String instance = format("/Catalog/items?pageSize=%d", pageSize);
 
