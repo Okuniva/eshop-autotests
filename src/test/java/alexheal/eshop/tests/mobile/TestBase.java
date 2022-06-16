@@ -7,13 +7,9 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import io.qameta.allure.Feature;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import static alexheal.eshop.helpers.DriverUtils.getSessionId;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
@@ -21,7 +17,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 @ExtendWith({ScreenShooterExtension.class})
 @Feature("mobile")
 @Layer("mobile")
-@Tag("mobile")
+@Tags({@Tag("mobile"), @Tag("all")})
 public class TestBase {
     @BeforeAll
     public static void beforeAll() {
@@ -42,6 +38,6 @@ public class TestBase {
 
         closeWebDriver();
         // ToDo enable get video
-        //AllureAttachments.addBSVideo(getSessionId());
+        //AllureAttachments.addBSVideo(sessionId);
     }
 }

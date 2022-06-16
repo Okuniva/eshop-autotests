@@ -13,12 +13,13 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith({ScreenShooterExtension.class})
-@Tag("web")
 @Feature("web")
 @Layer("web")
+@Tags({@Tag("web"), @Tag("all")})
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
