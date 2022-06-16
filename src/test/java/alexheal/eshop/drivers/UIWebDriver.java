@@ -15,6 +15,7 @@ public class UIWebDriver {
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
         Configuration.baseUrl = App.config.webUrl();
+        Configuration.timeout = 15000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
