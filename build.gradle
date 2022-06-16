@@ -71,7 +71,7 @@ compileTestJava {
 test {
     systemProperties(System.getProperties())
     useJUnitPlatform {
-        includeTags System.getProperty("tag").toString()
+        includeTags System.getProperty("tag").toString().split(";")
     }
 
     if (System.getProperty("threads") != null) {
