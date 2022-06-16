@@ -15,7 +15,7 @@ public class AuthTest extends TestBase {
     @Test
     @Owner("ValeevAA")
     @Severity(SeverityLevel.CRITICAL)
-    void successAuthorizationDemoUserTest() {
+    void successAuthorizationTest() {
         new LoginPage().authorization(App.config.userLogin(), App.config.userPassword());
         new CatalogPage().tapProfile();
         new ProfilePage().tapLogout();
