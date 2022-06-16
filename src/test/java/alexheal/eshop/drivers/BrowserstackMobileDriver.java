@@ -3,6 +3,7 @@ package alexheal.eshop.drivers;
 import alexheal.eshop.config.Android;
 import com.codeborne.selenide.WebDriverProvider;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -24,21 +25,16 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
 
         caps.setCapability("app", "bs://6812b6acb6107c49131dea6bed63264b1f3c4857");
 
+        caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
         caps.setCapability("deviceName", "Google Pixel 3");
         caps.setCapability("platformVersion", "9.0");
         caps.setCapability("platformName", "android");
+        caps.setCapability("connectHardwareKeyboard", false);
+
 
         caps.setCapability("project", "First Java Project");
         caps.setCapability("build", "browserstack-build-1");
         caps.setCapability("name", "first_test");
-
-        HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
-//        browserstackOptions.put("appiumVersion", "1.22.0");
-        browserstackOptions.put("debug", "false");
-        browserstackOptions.put("appiumLogs", "false");
-        browserstackOptions.put("disableAnimations", "true");
-        caps.setCapability("bstack:options", browserstackOptions);
-
 
         return new AndroidDriver(getBrowserstackUrl(), caps);
     }
