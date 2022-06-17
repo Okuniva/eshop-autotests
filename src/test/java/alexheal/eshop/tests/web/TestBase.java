@@ -23,7 +23,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        if(!SelenideLogger.hasListener("AllureSelenide"))
+            SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         UIWebDriver.configure();
     }
 

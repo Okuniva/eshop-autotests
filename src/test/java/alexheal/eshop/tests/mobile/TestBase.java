@@ -5,6 +5,7 @@ import alexheal.eshop.helpers.allure.AllureAttachments;
 import alexheal.eshop.helpers.allure.Layer;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.junit5.ScreenShooterExtension;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Feature;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
@@ -21,7 +22,8 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 public class TestBase {
     @BeforeAll
     public static void beforeAll() {
-        addListener("AllureSelenide", new AllureSelenide());
+        if(!SelenideLogger.hasListener("AllureSelenide"))
+            SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         closeWebDriver();
         Configuration.browserSize = null;
