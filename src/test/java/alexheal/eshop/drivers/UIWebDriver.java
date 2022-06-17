@@ -35,7 +35,7 @@ public class UIWebDriver {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
             Configuration.pageLoadTimeout = 60000;
-            Configuration.timeout = 7000;
+            Configuration.timeout = 15000;
             Configuration.remote = Project.config.remoteDriverUrl();
         }
 
