@@ -30,6 +30,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         caps.setCapability("platformVersion", "9.0");
         caps.setCapability("platformName", "android");
         caps.setCapability("connectHardwareKeyboard", false);
+        caps.setCapability("appWaitDuration", 30000);
 
 
         caps.setCapability("project", "First Java Project");

@@ -15,7 +15,6 @@ public class UIWebDriver {
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
         Configuration.baseUrl = App.config.webUrl();
-        Configuration.timeout = 15000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -35,6 +34,8 @@ public class UIWebDriver {
         if (Project.isRemoteWebDriver()) {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
+            Configuration.pageLoadTimeout = 60000;
+            Configuration.timeout = 7000;
             Configuration.remote = Project.config.remoteDriverUrl();
         }
 
