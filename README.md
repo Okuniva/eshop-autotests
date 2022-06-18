@@ -97,5 +97,7 @@ html-report in Allure TestOps.*
 
 </details>
 
+## <img width="4%" title="Selenoid" src="img/logo/Selenoid.svg"> Example of test execution in Selenoid
 
-// in progress
+> A video is attached to each test in the allure report.
+
