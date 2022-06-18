@@ -11,7 +11,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
 
 public class BrowserstackMobileDriver implements WebDriverProvider {
     @Nonnull
@@ -20,8 +19,8 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.merge(capabilities);
 
-        caps.setCapability("browserstack.user", Android.config.bs_username());
-        caps.setCapability("browserstack.key", Android.config.bs_access_key());
+        caps.setCapability("browserstack.user", Android.config.bsUsername());
+        caps.setCapability("browserstack.key", Android.config.bsAccessKey());
 
         caps.setCapability("app", "bs://6812b6acb6107c49131dea6bed63264b1f3c4857");
 
@@ -45,7 +44,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
 
     public static URL getBrowserstackUrl() {
         try {
-            String url = "http://" + Android.config.bs_username() + ":" + Android.config.bs_access_key() + "@" + "hub.browserstack.com" + "/wd/hub";
+            String url = "http://" + Android.config.bsUsername() + ":" + Android.config.bsAccessKey() + "@" + "hub.browserstack.com" + "/wd/hub";
             return new URL(url);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);

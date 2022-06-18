@@ -4,7 +4,6 @@ import alexheal.eshop.config.Android;
 import alexheal.eshop.config.Project;
 import com.codeborne.selenide.Selenide;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.MobileBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -53,7 +52,7 @@ public class DriverUtils {
 
     public static String getBSVideoUrl(String sessionId) {
         return given()
-                .auth().basic(Android.config.bs_username(), Android.config.bs_access_key())
+                .auth().basic(Android.config.bsUsername(), Android.config.bsAccessKey())
                 .when()
                 .get("https://api-cloud.browserstack.com/app-automate/sessions/" + sessionId + ".json")
                 .then()

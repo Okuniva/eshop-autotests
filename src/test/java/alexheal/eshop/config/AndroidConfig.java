@@ -9,7 +9,9 @@ import org.aeonbits.owner.Config;
         "classpath:config/mobile/androidRemote.properties"
 })
 public interface AndroidConfig extends Config {
-    String bs_username();
+    @Key("bs_username")
+    String bsUsername();
 
-    String bs_access_key();
+    @Key("bs_access_key")
+    String bsAccessKey();
 }
