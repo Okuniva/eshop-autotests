@@ -24,6 +24,7 @@
 <a href="https://qameta.io/"><img src="img/logo/Allure_TO.svg" width="50" height="50" alt="Allure Test OPS"/></a>
 <a href="https://rest-assured.io/"><img src="img/logo/rest-assured-logo.svg" width="50" height="50" alt="Allure Test OPS"/></a>
 <a href="https://www.atlassian.com/ru/software/jira"><img src="img/logo/Jira.svg" width="50" height="50" alt="Jira"/></a>
+<a href="https://browserstack.com/"><img src="img/logo/browserstack.svg" width="50" height="50" alt="Browserstack"/></a>
 </p>
 
 <details open><summary><h2>:arrows_counterclockwise: Shared part</h2></summary>
