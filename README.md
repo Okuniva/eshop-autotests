@@ -20,6 +20,10 @@
 <a href="https://gradle.org/"><img src="img/logo/Gradle.svg" width="50" height="50" alt="Gradle"/></a>
 <a href="https://selenide.org/"><img src="img/logo/Selenide.svg" width="50" height="50" alt="Selenide"/></a>
 <a href="https://github.com/allure-framework/allure2/"><img src="img/logo/Allure.svg" width="50" height="50" alt="Allure"/></a>
+<a href="https://appium.io/"><img src="img/logo/appium.png" width="50" height="50" alt="Appium"/></a>
+<a href="https://qameta.io/"><img src="img/logo/Allure_TO.png" width="50" height="50" alt="Allure Test OPS"/></a>
+<a href="https://rest-assured.io/"><img src="img/logo/rest-assured-logo.svg" width="50" height="50" alt="Allure Test OPS"/></a>
+<a href="https://www.atlassian.com/ru/software/jira"><img src="img/logo/Jira.svg" width="50" height="50" alt="Jira"/></a>
 </p>
 
 <details open><summary><h2>:arrows_counterclockwise: Shared part</h2></summary>
