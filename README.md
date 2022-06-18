@@ -25,7 +25,7 @@
 <details open><summary><h2>:arrows_counterclockwise: Shared part</h2></summary>
 
 <h3> 
-<img src="img/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/eshop-autotests/">pipeline.</a> For access to jenkins contact to me.
+<img src="img/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/eshop-autotests/">pipeline.</a> For access to jenkins contact with me.
 </h3>
 
 ### build with param screen
@@ -62,7 +62,7 @@ html-report in Allure TestOps.*
     </ul>
 
 
-## <img width="4%" title="Allure Report" src="img/logo/Allure.svg"> Tests results report in [Allure Report](https://jenkins.autotests.cloud/job/eshop-autotests/114/allure/)
+## <img width="4%" title="Allure Report" src="img/logo/Allure.svg"> Tests results report in [Allure Report](https://alexheal.github.io/eshop-artefacts/)
 
 ### :pushpin: Common information
 
