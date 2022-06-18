@@ -95,10 +95,6 @@ html-report in Allure TestOps.*
 <img title="Telegram Notifications" src="img/screens/WebTelegram.png">
 </p>
 
-## <img width="4%" title="Selenoid" src="img/logo/Selenoid.svg"> Example of test execution in Selenoid
-
-> A video is attached to each test in the report.
-
 </details>
 
 
