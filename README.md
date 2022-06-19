@@ -26,8 +26,8 @@
 <a href="https://selenide.org/"><img src="img/logo/Selenide.svg" width="50" height="50" alt="Selenide"/></a>
 <a href="https://github.com/allure-framework/allure2/"><img src="img/logo/Allure.svg" width="50" height="50" alt="Allure"/></a>
 <a href="https://appium.io/"><img src="img/logo/Appium.svg" width="50" height="50" alt="Appium"/></a>
-<a href="https://qameta.io/"><img src="img/logo/AllureTestOps.svg" width="50" height="50" alt="Allure Test Ops"/></a>
-<a href="https://rest-assured.io/"><img src="img/logo/RestAssuredLogo.svg" width="50" height="50" alt="Allure Test OPS"/></a>
+<a href="https://qameta.io/"><img src="img/logo/AllureTestOps.svg" width="50" height="50" alt="AllureTestOps"/></a>
+<a href="https://rest-assured.io/"><img src="img/logo/RestAssured.svg" width="50" height="50" alt="RestAssured"/></a>
 <a href="https://www.atlassian.com/ru/software/jira"><img src="img/logo/Jira.svg" width="50" height="50" alt="Jira"/></a>
 <a href="https://browserstack.com/"><img src="img/logo/Browserstack.svg" width="50" height="50" alt="Browserstack"/></a>
 </p>
