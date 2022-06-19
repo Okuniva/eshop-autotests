@@ -20,16 +20,16 @@
 <a href="https://aerokube.com/selenoid/"><img src="img/logo/Selenoid.svg" width="50" height="50" alt="Selenoid"/></a>
 <a href="https://www.jetbrains.com/idea/"><img src="img/logo/Idea.svg" width="50" height="50" alt="IDEA"/></a>
 <a href="https://www.java.com/"><img src="img/logo/Java.svg" width="50" height="50" alt="Java"/></a>
-<a href="https://github.com/"><img src="img/logo/github.svg" width="50" height="50" alt="Github"/></a>
+<a href="https://github.com/"><img src="img/logo/GitHub.svg" width="50" height="50" alt="Github"/></a>
 <a href="https://junit.org/junit5/"><img src="img/logo/Junit5.svg" width="50" height="50" alt="JUnit 5"/></a>
 <a href="https://gradle.org/"><img src="img/logo/Gradle.svg" width="50" height="50" alt="Gradle"/></a>
 <a href="https://selenide.org/"><img src="img/logo/Selenide.svg" width="50" height="50" alt="Selenide"/></a>
 <a href="https://github.com/allure-framework/allure2/"><img src="img/logo/Allure.svg" width="50" height="50" alt="Allure"/></a>
-<a href="https://appium.io/"><img src="img/logo/appium.svg" width="50" height="50" alt="Appium"/></a>
-<a href="https://qameta.io/"><img src="img/logo/Allure_TO.svg" width="50" height="50" alt="Allure Test OPS"/></a>
-<a href="https://rest-assured.io/"><img src="img/logo/rest-assured-logo.svg" width="50" height="50" alt="Allure Test OPS"/></a>
+<a href="https://appium.io/"><img src="img/logo/Appium.svg" width="50" height="50" alt="Appium"/></a>
+<a href="https://qameta.io/"><img src="img/logo/AllureTestOps.svg" width="50" height="50" alt="Allure Test Ops"/></a>
+<a href="https://rest-assured.io/"><img src="img/logo/RestAssuredLogo.svg" width="50" height="50" alt="Allure Test OPS"/></a>
 <a href="https://www.atlassian.com/ru/software/jira"><img src="img/logo/Jira.svg" width="50" height="50" alt="Jira"/></a>
-<a href="https://browserstack.com/"><img src="img/logo/browserstack.svg" width="50" height="50" alt="Browserstack"/></a>
+<a href="https://browserstack.com/"><img src="img/logo/Browserstack.svg" width="50" height="50" alt="Browserstack"/></a>
 </p>
 
 <details open><summary><h2>:arrows_counterclockwise: Shared part</h2></summary>
@@ -89,7 +89,7 @@ html-report in Allure TestOps.*
   <img src="img/screens/AllureMain.png" alt="Allure Report" width="900">
 </p>
 
-## <img width="4%" title="Allure TestOPS" src="img/logo/Allure_TO.svg"> [Allure TestOps](https://allure.autotests.cloud/launch/13303) integration
+## <img width="4%" title="Allure TestOPS" src="img/logo/AllureTestOps.svg"> [Allure TestOps](https://allure.autotests.cloud/launch/13303) integration
 
 ### :pushpin: Overview dashboard
 
