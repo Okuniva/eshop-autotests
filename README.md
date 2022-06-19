@@ -4,7 +4,12 @@
 
 # Autotest for Microsoft eshop projects
 ### Web UI & API - <a target="_blank" href="https://github.com/dotnet-architecture/eShopOnContainers">eShopOnContainers</a>
+
+> The app deployed with kubernetes on MS Azure, good demonstration about enterprise microservice architecture
+
 ### Mobile - <a target="_blank" href="https://github.com/dotnet-architecture/eshop-mobile-client">eshop mobile client</a>
+
+> Cross-platform mobile eshop client that supports Android, iOS, UWP. Current autotests used build from this pull request <a target="_blank" href="https://github.com/dotnet-architecture/eshop-mobile-client/pull/23">pull request</a>
 
 // readme in progress
 
