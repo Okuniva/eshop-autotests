@@ -5,6 +5,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.cssValue;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byTagAndText;
@@ -32,8 +33,8 @@ public class BasketPage {
     @Step("verify item count - {count} and price - {price}")
     public BasketPage verifyItems(int count, String price) {
         SelenideElement checkoutInfo = $(".esh-basket-checkout").as("checkoutInfo");
-        checkoutInfo.shouldHave(Condition.text("(" + count + " items)"));
-        checkoutInfo.shouldHave(Condition.text(price));
+        checkoutInfo.shouldHave(text("(" + count + " items)"),
+                text(price));
 
         return this;
     }
