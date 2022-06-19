@@ -1,5 +1,5 @@
 <a href="https://dot.net/architecture">
-   <img src="img/logo/eshop_logo.png" alt="eShop logo" title="eShopOnContainers" align="right" height="60" />
+   <img src="img/logo/eShop.png" alt="eShop logo" title="eShopOnContainers" align="right" height="60" />
 </a>
 
 # Autotest for Microsoft eshop projects
