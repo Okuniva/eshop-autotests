@@ -47,12 +47,12 @@
 
 After tests execution, in the panel <code><strong>*История сборок*</strong></code> in the row with build number
 icons <img width="2%" title="Allure Report" src="img/logo/Allure.svg"><code><strong>*Allure Report*</strong></code>
-and <img width="2%" title="Allure TestOps" src="img/logo/Allure_TO.svg"><code><strong>*Allure TestOps*</strong></code> will appear.
+and <img width="2%" title="Allure TestOps" src="img/logo/AllureTestOps.svg"><code><strong>*Allure TestOps*</strong></code> will appear.
 
 *Icon <img width="2%" title="Allure Report" src="img/logo/Allure.svg"><code><strong>*Allure Report*</strong></code> opens
 html-report in Allure Report.*
 
-*Icon <img width="2%" title="Allure TestOps" src="img/logo/Allure_TO.svg"><code><strong>*Allure TestOps*</strong></code> opens
+*Icon <img width="2%" title="Allure TestOps" src="img/logo/AllureTestOps.svg"><code><strong>*Allure TestOps*</strong></code> opens
 html-report in Allure TestOps.*
 
 <p align="center">
