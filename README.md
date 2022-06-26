@@ -32,11 +32,7 @@
 <a href="https://browserstack.com/"><img src="img/logo/Browserstack.svg" width="50" height="50" alt="Browserstack"/></a>
 </p>
 
-<details open><summary><h2>:arrows_counterclockwise: Shared part</h2></summary>
-
-<h3> 
-<img src="img/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/eshop-autotests/">pipeline.</a> For access to jenkins contact with me.
-</h3>
+## <img width="4%" title="Jenkins" src="img/logo/Jenkins.svg"> Jenkins pipeline
 
 ### build with param screen
 *For launch remote tests it's necessary to click the option <code><strong>*Собрать с параметрами*</strong></code>, then to fill build settings and to click the button <code><strong>*Собрать*</strong></code>.*
@@ -60,16 +56,14 @@ html-report in Allure TestOps.*
 <img src="img/screens/JenkinsMain.png" alt="Jenkins"/></a>
 </p>
 
-</details>
 
-<details open><summary><h2>:globe_with_meridians: Web UI part</h2></summary>
+## :white_check_mark: Covered functionality
 
-<h3> :white_check_mark: Covered functionality</h3>
-    <ul>
-        <li>[X] Auth Tests </li>
-        <li>[X] Filter Tests </li>
-        <li>[X] HomePage Tests </li>
-    </ul>
+<ul>
+    <li>[X] Auth Tests </li>
+    <li>[X] Filter Tests </li>
+    <li>[X] HomePage Tests </li>
+</ul>
 
 
 ## <img width="4%" title="Allure Report" src="img/logo/Allure.svg"> Tests results report in [Allure Report](https://alexheal.github.io/eshop-artefacts/)
@@ -111,6 +105,5 @@ html-report in Allure TestOps.*
 
 https://user-images.githubusercontent.com/24870446/174431817-6defe430-2753-4078-b9a2-e51bf9b8d2e9.mp4
 
-</details>
 
 
