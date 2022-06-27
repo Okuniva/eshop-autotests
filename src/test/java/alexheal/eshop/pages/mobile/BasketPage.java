@@ -19,7 +19,6 @@ public class BasketPage {
     @Step("click 'Checkout'")
     public BasketPage tapCheckout() {
         $(byTestId("CheckoutButton")).click();
-
         return this;
     }
 
@@ -36,7 +35,6 @@ public class BasketPage {
                 .perform();
 
         $(byTestId("DeleteButton")).click();
-
         return this;
     }
 
@@ -44,7 +42,6 @@ public class BasketPage {
     public BasketPage verifyTotalHeader(String price) {
         $(byTestId("ListTotalHeaderLabel")).shouldHave(
                 Condition.text(price));
-
         return this;
     }
 }

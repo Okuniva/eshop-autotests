@@ -13,7 +13,6 @@ public class FilterPage {
     public FilterPage setBrand(FilterBrand brand) {
         $(byTestId("BrandPicker_Container")).click();
         $x("//*[contains(@text, '" + brand.text + "')]").click();
-
         return this;
     }
 
@@ -21,21 +20,18 @@ public class FilterPage {
     public FilterPage setType(FilterType type) {
         $(byTestId("TypePicker_Container")).click();
         $x("//*[contains(@text, '" + type.text + "')]").click();
-
         return this;
     }
 
     @Step("apply filter")
     public FilterPage applyFilter() {
         $(byTestId("ApplyButton")).click();
-
         return this;
     }
 
     @Step("clear filter")
     public FilterPage clearFilter() {
         $(byTestId("ClearButton")).click();
-
         return this;
     }
 }

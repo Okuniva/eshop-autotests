@@ -9,7 +9,6 @@ public class CheckoutPage {
     @Step("click 'Place Order'")
     public CheckoutPage tapPlaceOrder() {
         $(byTestId("PlaceOrderButton")).click();
-
         return this;
     }
 }

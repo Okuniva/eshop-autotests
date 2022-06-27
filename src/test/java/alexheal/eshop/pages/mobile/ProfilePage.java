@@ -13,7 +13,6 @@ public class ProfilePage {
     @Step("click 'Logout'")
     public ProfilePage tapLogout() {
         $(byTestId("Logout")).click();
-
         return this;
     }
 }

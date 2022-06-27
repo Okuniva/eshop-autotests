@@ -26,7 +26,6 @@ public class BasketPage {
     public BasketPage clickCheckout() {
         $(byTagAndText("button", "Checkout"))
                 .hover().click(ClickOptions.usingDefaultMethod());
-
         return this;
     }
 
@@ -35,7 +34,6 @@ public class BasketPage {
         SelenideElement checkoutInfo = $(".esh-basket-checkout").as("checkoutInfo");
         checkoutInfo.shouldHave(text("(" + count + " items)"),
                 text(price));
-
         return this;
     }
 }

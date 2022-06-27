@@ -15,7 +15,6 @@ public class LoginPage {
                 .withDisplayedText(email.substring(0, 2) + "* - email"));
         $("#Password").setValue(SetValueOptions.withText(password).sensitive())
                 .pressEnter();
-
         return this;
     }
 }

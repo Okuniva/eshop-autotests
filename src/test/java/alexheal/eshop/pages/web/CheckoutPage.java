@@ -20,7 +20,6 @@ public class CheckoutPage {
     public CheckoutPage clickPlaceOrder() {
         $(byTagAndText("button", "Place Order"))
                 .hover().click();
-
         return this;
     }
 }

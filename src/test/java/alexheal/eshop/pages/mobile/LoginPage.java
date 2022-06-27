@@ -12,7 +12,6 @@ public class LoginPage {
 //        $(byTestId("UserNameEntry")).setValue(email);
 //        $(byTestId("PasswordEntry")).setValue(password);
         $(byTestId("LoginButton")).click();
-
         return this;
     }
 
@@ -20,7 +19,6 @@ public class LoginPage {
     public LoginPage verifyInfoLabel() {
         $(byTestId("InfoLabel")).as("Info label")
                 .shouldHave(Condition.text("ARE YOU REGISTERED?"));
-
         return this;
     }
 }

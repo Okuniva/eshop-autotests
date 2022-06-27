@@ -14,7 +14,6 @@ public class CheckoutAlert {
         $(AppiumBy.id("android:id/button2")).click();
         $(AppiumBy.id("eShopOnContainers.Droid:id/alertTitle"))
                 .shouldNotBe(visible);
-
         return this;
     }
 
@@ -24,7 +23,6 @@ public class CheckoutAlert {
                 text("Checkout"));
         $(AppiumBy.id(("android:id/message"))).shouldHave(
                 text("Order sent successfully!"));
-
         return this;
     }
 }

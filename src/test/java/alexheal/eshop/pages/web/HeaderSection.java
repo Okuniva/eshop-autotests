@@ -9,7 +9,6 @@ public class HeaderSection {
     @Step("click 'Login'")
     public HeaderSection clickLogin() {
         $(".esh-identity-name").click();
-
         return this;
     }
 
@@ -17,14 +16,12 @@ public class HeaderSection {
     public HeaderSection verifyUsername(String username) {
         $(".esh-identity-name").as("username")
                 .shouldHave(Condition.exactTextCaseSensitive(username));
-
         return this;
     }
 
     @Step("click 'Basket'")
     public HeaderSection clickBasket() {
         $(".esh-basketstatus-image").click();
-
         return this;
     }
 }

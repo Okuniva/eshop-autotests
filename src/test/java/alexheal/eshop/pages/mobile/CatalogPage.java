@@ -10,21 +10,18 @@ public class CatalogPage {
     @Step("click 'Profile'")
     public CatalogPage tapProfile() {
         $(byTestId("PROFILE")).click();
-
         return this;
     }
 
     @Step("click 'Filter'")
     public CatalogPage tapFilter() {
         $(byTestId("FilterIcon")).click();
-
         return this;
     }
 
     @Step("click 'ShoppingCart'")
     public CatalogPage tapCart() {
         $(byTestId("ShoppingCart")).click();
-
         return this;
     }
 
@@ -32,7 +29,6 @@ public class CatalogPage {
     public CatalogPage verifyItem(String name, String price) {
         $(byTestId("ProductName")).shouldHave(text(name));
         $(byTestId("ProductPrice")).shouldHave(text(price));
-
         return this;
     }
 
@@ -40,7 +36,6 @@ public class CatalogPage {
     public CatalogPage verifyNoProductsFound() {
         $(byTestId("NoProductsFoundLabel")).shouldHave(
                 text("NO PRODUCTS FOUND"));
-
         return this;
     }
 }
